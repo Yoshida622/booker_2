@@ -8,8 +8,35 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <p class="navbar-brand">Bookers</p>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+        <%# <% if user_signed_in?%> 
+          <%# <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Users</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-book"></span> Books</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> log out</a></li>         %>
+        <%# <% else %>  
+          <li><a href="/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+          <li><a href="/homes/about"><span class="glyphicon glyphicon-link"></span> About</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-edit"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        <%# <% end %> 
+        </ul>
+      </div>
+    </nav>
     <%= yield %>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <p class = "mr-5 text-right">CopyRight Infratop.inc</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
