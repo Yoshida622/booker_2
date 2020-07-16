@@ -16,15 +16,15 @@
         </div>
         <ul class="nav navbar-nav navbar-right">
         <%# <% if user_signed_in?%> 
-          <%# <li><a href="#"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Users</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-book"></span> Books</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> log out</a></li>         %>
+          <%# <li><%= link_to '  Home', root_path ,class: "glyphicon glyphicon-home"%></li> 
+          <%# <li><%= link_to '  Users', root_path ,class: "glyphicon glyphicon-user"%></li> 
+          <%# <li><%= link_to '  Books', root_path ,class: "glyphicon glyphicon-book"%></li> 
+          <%# <li><%= link_to '  Log out', root_path ,class: "glyphicon glyphicon-log-out"%></li>
         <%# <% else %>  
-          <li><a href="/"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-          <li><a href="/homes/about"><span class="glyphicon glyphicon-link"></span> About</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-edit"></span> Sign Up</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><%= link_to '  Home', root_path ,class: "glyphicon glyphicon-home"%></li>
+          <li><%= link_to '  About', homes_about_path ,class: "glyphicon glyphicon-link"%></li>
+          <li><%= link_to '  Sign up', root_path ,class: "glyphicon glyphicon-edit"%></li>
+          <li><%= link_to '  Login', root_path ,class: "glyphicon glyphicon-log-in"%></li>
         <%# <% end %> 
         </ul>
       </div>
