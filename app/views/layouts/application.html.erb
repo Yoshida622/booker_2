@@ -9,34 +9,44 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <nav class="navbar navbar-inverse">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <p class="navbar-brand">Bookers</p>
+      <%# <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1"> %>
+            <nav class="navbar navbar-inverse">
+              <div class="container-fluid">
+                <div class="navbar-header">
+                  <p class="navbar-brand pl-5">Bookers</p>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                <%# <% if user_signed_in?%> 
+                  <%# <li><%= link_to '  Home', root_path ,class: "glyphicon glyphicon-home"%></li> 
+                  <%# <li><%= link_to '  Users', root_path ,class: "glyphicon glyphicon-user"%></li> 
+                  <%# <li><%= link_to '  Books', root_path ,class: "glyphicon glyphicon-book"%></li> 
+                  <%# <li><%= link_to '  Log out', destroy_user_session_path ,class: "glyphicon glyphicon-log-out"%></li>
+                <%# <% else %>  
+                  <li><%= link_to '  Home', root_path ,class: "glyphicon glyphicon-home"%></li>
+                  <li><%= link_to '  About', homes_about_path ,class: "glyphicon glyphicon-link"%></li>
+                  <li><%= link_to '  Sign up', new_user_registration_path ,class: "glyphicon glyphicon-edit"%></li>
+                  <li><%= link_to '  Login', new_user_session_path ,class: "glyphicon glyphicon-log-in"%></li>
+                <%# <% end %> 
+                </ul>
+              </div>
+            </nav>
+          <%# </div>
         </div>
-        <ul class="nav navbar-nav navbar-right">
-        <%# <% if user_signed_in?%> 
-          <%# <li><%= link_to '  Home', root_path ,class: "glyphicon glyphicon-home"%></li> 
-          <%# <li><%= link_to '  Users', root_path ,class: "glyphicon glyphicon-user"%></li> 
-          <%# <li><%= link_to '  Books', root_path ,class: "glyphicon glyphicon-book"%></li> 
-          <%# <li><%= link_to '  Log out', destroy_user_session_path ,class: "glyphicon glyphicon-log-out"%></li>
-        <%# <% else %>  
-          <li><%= link_to '  Home', root_path ,class: "glyphicon glyphicon-home"%></li>
-          <li><%= link_to '  About', homes_about_path ,class: "glyphicon glyphicon-link"%></li>
-          <li><%= link_to '  Sign up', new_user_registration_path ,class: "glyphicon glyphicon-edit"%></li>
-          <li><%= link_to '  Login', new_user_session_path ,class: "glyphicon glyphicon-log-in"%></li>
-        <%# <% end %> 
-        </ul>
-      </div>
-    </nav>
-    <%= yield %>
-    
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p class = "mr-5 text-right">CopyRight Infratop.inc</p>
+      </div> %>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <%= yield %>
+          </div>
+        </div>
+      
+        <div class="row">
+          <div class="col-md-10 col-md-offset-1">
+            <p class = "mr-5 text-right">CopyRight Infratop.inc</p>
+          </div>
         </div>
       </div>
-    </div>
   </body>
 </html>
