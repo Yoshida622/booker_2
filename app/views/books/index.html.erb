@@ -1,5 +1,5 @@
-<div class="col-md-1"></div>
-<div class="col-md-3">
+
+<div class="col-xs-3">
   <h2>User info</h2>
   <%= attachment_image_tag @user, :profile_image, :fill, 60, 60, format: 'jpeg', class: "img-circle pull-left profile-img", fallback: "no_image.jpg" %>
   <hr>
@@ -18,7 +18,7 @@
   <%= f.submit 'Create Book',class: "btn btn-default btn-block"%>
   <% end %>
 </div>
-<div class="col-md-7">
+<div class="col-xs-9">
   <h2>Books</h2>
   <table>
     <tr>
@@ -40,7 +40,11 @@
     <% end %>
   </table>
 </div>
-<div class="col-md-1"></div>
+
+<div class="container">
+  <div class="row"> 
+  </div>
+</div>
 
 
 <%# <%= book.body%> 
