@@ -14,7 +14,13 @@ class ApplicationController < ActionController::Base
 
   def correct_user
     @user = User.find(params[:id])
-    redirect_to(root_url) unless @user == current_user
+    redirect_to user_url(current_user.id) unless @user == current_user
+  end
+
+  def correct_book
+    # @user = User.find(params[:id])
+    @book = Book.find(params[:id])
+    redirect_to books_path unless current_user.id == @book.user_id
   end
 
 end
