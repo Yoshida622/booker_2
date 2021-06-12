@@ -33,13 +33,15 @@ class BooksController < ApplicationController
   end
 
   def create
+    @user  = User.find(current_user.id)
+    @books = Book.all
     book = Book.new(book_params)
     book.user_id = current_user.id
     if book.save
        redirect_to book_path(book.id), notice: 'successfully'
     else
        @user  = User.find(current_user.id)
-       @books = Book.all
+      #  @books = Book.all
        @book = Book.new
        flash.now[:alert] = "error can't be blank"
        render :index
